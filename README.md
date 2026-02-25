@@ -9,17 +9,17 @@
 ```bash
 pip install flask requests
 
-# Terminal 1
-python vulnerable/app_vulnerable.py       # port 5000
+# Terminal 1 - Vulnerable App
+python src/vulnerable/app_vulnerable.py
 
-# Terminal 2  
-python fixed/app_fix1_pessimistic.py      # port 5001
+# Terminal 2 - Fix 1: Pessimistic Lock
+python src/fixed/app_fix1_pessimistic.py
 
-# Terminal 3
-python fixed/app_fix2_optimistic.py       # port 5002
+# Terminal 3 - Fix 2: Optimistic Lock
+python src/fixed/app_fix2_optimistic.py
 
-# Terminal 4 — run the attack
-python poc/exploit.py --target all --threads 10
+# Terminal 4 - Run the Attack
+python src/poc/exploit.py --target all --threads 10
 ```
 
 ## Expected Results
